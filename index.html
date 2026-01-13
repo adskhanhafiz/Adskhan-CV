@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>CV | Kanzzz Lazzz</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    transition: background 0.4s, color 0.4s;
+}
+
+body.light {
+    background: #f4f6fb;
+    color: #333;
+}
+
+body.dark {
+    background: #121212;
+    color: #f5f5f5;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    animation: fadeUp 1s ease;
+}
+
+/* ANIMASI MASUK */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header img {
+    width: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    transition: transform 0.3s;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+/* DARK HEADER */
+body.dark header {
+    background: linear-gradient(135deg, #2d2d2d, #000);
+}
+
+/* TOGGLE */
+.toggle {
+    margin-left: auto;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* SECTION */
+section {
+    padding: 25px 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    animation: fadeSection 1s ease;
+}
+
+@keyframes fadeSection {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body.dark section {
+    border-color: rgba(255,255,255,0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+    border-left: 5px solid #667eea;
+    padding-left: 10px;
+}
+
+/* SKILL */
+.skills span {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin: 6px 6px 0 0;
+    font-size: 14px;
+    transition: transform 0.2s;
+}
+
+.skills span:hover {
+    transform: scale(1.1);
+}
+
+/* JOB */
+.job {
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .toggle {
+        margin: 15px 0 0;
+    }
+}
+</style>
+</head>
+
+<body class="light">
+
+<div class="container">
+
+<header>
+    <img src="https://i.pravatar.cc/150">
+    <div>
+        <h1>Adskhan Hafiz Dewanda Sirait</h1>
+        <p>Junior Web Developer</p>
+        <p>Email: adskhan21@email.com | IG: @skanwiuwiu</p>
+    </div>
+    <button class="toggle" onclick="toggleMode()">🌙 / ☀️</button>
+</header>
+
+<section>
+    <h2>Profil</h2>
+    <p>
+        Saya calon Web Developer yang tertarik pada pembuatan website modern,
+        UI/UX, dan pengembangan frontend.
+    </p>
+</section>
+
+<section>
+    <h2>Pendidikan</h2>
+    <div class="job">
+        <h3>SMA / SMK (SMA 2 KUTA SELATAN)</h3>
+        <small>2022 – 2025</small>
+        <p>Jurusan: (Software Enginneer)</p>
+    </div>
+</section>
+
+<section>
+    <h2>Keahlian</h2>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>VS Code</span>
+        <span>UI/UX</span>
+    </div>
+</section>
+
+<section>
+    <h2>Pengalaman / Proyek</h2>
+    <div class="job">
+        <h3>Website CV & Portfolio</h3>
+        <small>2026</small>
+        <p>Membuat CV web profesional dengan dark mode dan animasi.</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Adskhan Hafiz Dewanda Sirait — Professional CV
+</footer>
+
+</div>
+
+<script>
+function toggleMode() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
